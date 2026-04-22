@@ -1,0 +1,126 @@
+/* LEFT */
+.left {
+  width: 25%;
+  position: fixed;
+  height: 100vh;
+  background: #111;
+  color: white;
+}
+
+.LeftCard-innerDiv {
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid #808080;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.Left-inner-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Left-inner-two {
+  width: 100%;
+}
+
+.Left-inner-three,
+.Left-inner-four {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.Left-inner-five {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.Left-inner-five div svg,
+.Left-inner-five div a svg {
+  border: 1px solid #808080;
+  height: 15px;
+  width: 15px;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 0 10px 0 0;
+  color: #fff;
+}
+
+.Left-inner-six {
+  width: 100%;
+}
+
+.Left-inner-six button {
+  cursor: pointer;
+  width: 100%;
+  padding: 5px;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.Left-inner-six button:hover {
+  filter: drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 10px #ffffff);
+}
+
+/* Compact mode for drawer */
+.LeftCard-innerDiv.compact {
+  border: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+}
+
+/* Image smaller */
+.LeftCard-innerDiv.compact .Left-inner-two img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* Reduce spacing */
+.LeftCard-innerDiv.compact .Left-inner-three,
+.LeftCard-innerDiv.compact .Left-inner-four {
+  align-items: center;
+}
+
+/* Hide big button in drawer */
+.LeftCard-innerDiv.compact .Left-inner-six {
+  display: none;
+}
+
+/* Social icons smaller */
+.LeftCard-innerDiv.compact .Left-inner-five {
+  justify-content: center;
+}
+
+.LeftCard-innerDiv.compact .Left-inner-five svg {
+  height: 12px;
+  width: 12px;
+  padding: 4px;
+}
+
+@media (max-width: 1024px) {
+  .left {
+    display: none;
+  }
+
+  .center {
+    width: 95%;
+    margin-left: 0;
+    margin-right: 5%;
+  }
+}

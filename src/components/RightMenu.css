@@ -1,0 +1,152 @@
+/* RIGHT */
+
+.top-menu svg {
+  border: 2px solid #808080;
+  border-radius: 25px;
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+}
+
+.right {
+  width: 5%;
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item {
+  size: 12px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.menu-item svg {
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+a .menu-item:hover svg {
+  filter: drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 10px #ffffff);
+}
+
+.menu-item a {
+  color: #fff;
+}
+
+/* drawer menu */
+.top-menu {
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: #111;
+  color: white;
+  transition: right 0.3s ease;
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  gap: 20px;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+.drawer p {
+  margin: 20px 0;
+}
+
+.drawer-links p {
+  margin: 20px 0 20px 20px;
+  cursor: pointer;
+}
+
+.drawer .drawer-links p:hover {
+  filter: drop-shadow(0 0 5px #ffffffb2) drop-shadow(0 0 10px #ffffffaf);
+}
+
+.drawer-social {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.drawer-social .menu-item svg {
+  border: 1px solid #808080;
+  height: 15px;
+  width: 15px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.close-button {
+  padding: 10px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  text-align: end;
+}
+
+.static-outer-menu {
+  border: 2px solid #808080;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.menu-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 400px;
+}
+
+.drawer-profile {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+/* scrollbar */
+/* Chrome, Edge, Safari */
+.drawer::-webkit-scrollbar {
+  width: 8px; /* scrollbar width */
+}
+
+.drawer::-webkit-scrollbar-track {
+  background: #111; /* track color */
+}
+
+.drawer::-webkit-scrollbar-thumb {
+  background: #ffffff; /* your orange theme */
+  border-radius: 10px;
+}
+
+.drawer::-webkit-scrollbar-thumb:hover {
+  background: #cacaca; /* lighter on hover */
+}
+
+.drawer::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow:
+    0 0 10px #bbbbbb,
+    0 0 20px #ffffff;
+}

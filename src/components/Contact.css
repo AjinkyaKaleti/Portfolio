@@ -1,0 +1,65 @@
+.contact-title button {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Wrapper */
+.contact-wrapper {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Form Grid */
+.contact-form {
+  display: grid;
+  gap: 20px;
+}
+
+/* Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+/* Inputs */
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #111;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Focus */
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: 0 0 5px #ffffff;
+}
+
+/* Button */
+.submit-btn {
+  padding: 10px;
+  background: #ffffff;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #ffffff;
+  filter: drop-shadow(0 0 5px #ffffffb2) drop-shadow(0 0 10px #ffffffaf);
+}
