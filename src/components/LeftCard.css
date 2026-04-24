@@ -1,11 +1,4 @@
 /* LEFT */
-.left {
-  width: 25%;
-  position: fixed;
-  height: 100vh;
-  background: #111;
-  color: white;
-}
 
 .LeftCard-innerDiv {
   margin: 20px;
@@ -26,6 +19,10 @@
   width: 100%;
 }
 
+.Left-inner-one h4 {
+  font-family: "Michroma", sans-serif;
+}
+
 .Left-inner-two {
   width: 100%;
 }
@@ -37,6 +34,11 @@
   flex-direction: column;
   justify-content: left;
   align-items: left;
+}
+
+.Left-inner-three div p,
+.Left-inner-four div p {
+  font-size: 13px;
 }
 
 .Left-inner-five {
@@ -69,37 +71,24 @@
   border: none;
   background-color: #fff;
   border-radius: 6px;
+  font-family: "Barlow", sans-serif;
 }
 
 .Left-inner-six button:hover {
-  filter: drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 10px #ffffff);
-}
-
-/* Compact mode for drawer */
-.LeftCard-innerDiv.compact {
-  border: none;
-  margin: 0;
-  padding: 0;
-  gap: 8px;
-  align-items: center;
-  text-align: center;
+  filter: drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 4px #ffffff);
 }
 
 /* Image smaller */
 .LeftCard-innerDiv.compact .Left-inner-two img {
   width: 50px;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 /* Reduce spacing */
 .LeftCard-innerDiv.compact .Left-inner-three,
-.LeftCard-innerDiv.compact .Left-inner-four {
+.LeftCard-innerDiv.compact .Left-inner-four,
+.LeftCard-innerDiv.compact .Left-inner-five {
   align-items: center;
-}
-
-/* Hide big button in drawer */
-.LeftCard-innerDiv.compact .Left-inner-six {
-  display: none;
 }
 
 /* Social icons smaller */
@@ -116,11 +105,5 @@
 @media (max-width: 1024px) {
   .left {
     display: none;
-  }
-
-  .center {
-    width: 95%;
-    margin-left: 0;
-    margin-right: 5%;
   }
 }

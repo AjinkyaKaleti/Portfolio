@@ -37,18 +37,27 @@ const LeftCard = ({ compact }) => {
       </div>
       <div className="Left-inner-five">
         <div>
-          <a href="https://wa.me/918898708468" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faWhatsapp} />
-          </a>
-        </div>
-        <div>
           <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
         </div>
+
         <div>
           <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
         </div>
+
         <div>
-          <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+          <a
+            href="https://github.com/AjinkyaKaleti"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+        </div>
+
+        <div>
+          <a href="https://wa.me/918898708468" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faWhatsapp} />
+          </a>
         </div>
       </div>
       <div className="Left-inner-six">

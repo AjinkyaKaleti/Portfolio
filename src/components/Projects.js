@@ -28,7 +28,7 @@ const projects = [
     name: "Portfolio",
     tech: "React",
     image: "/assets/portfolio.png",
-    link: "https://github.com/your-username/portfolio",
+    link: "https://github.com/AjinkyaKaleti/Portfolio",
   },
 ];
 
@@ -43,12 +43,14 @@ const Projects = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setShow(true);
+        } else {
+          setShow(false);
         }
       },
       {
         root: container,
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px",
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px",
       },
     );
 
@@ -86,6 +88,13 @@ const Projects = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="project-footer">
+        <p>
+          Note: Projects might not response deu to free server consuption but
+          are running and well connected.
+        </p>
       </div>
     </div>
   );

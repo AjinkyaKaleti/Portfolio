@@ -8,7 +8,7 @@
 }
 
 .AboutMe .about-desc {
-  font-size: 12px;
+  font-size: 13px;
   text-justify: inter-word;
 }
 
@@ -26,24 +26,10 @@
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s ease;
+  font-family: "Barlow", sans-serif;
 }
 
 .download-button:hover {
   background-color: #fff;
-  filter: drop-shadow(0 0 5px #ffffffb2) drop-shadow(0 0 10px #ffffffaf);
-}
-
-@media (max-width: 768px) {
-  .left {
-    display: none;
-  }
-
-  .right {
-    width: 10%;
-  }
-
-  .center {
-    width: 90%;
-    margin-left: 0;
-  }
+  filter: drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 4px #ffffff);
 }

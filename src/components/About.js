@@ -1,4 +1,4 @@
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faFilePdf, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./About.css";
 
@@ -36,6 +36,7 @@ const About = () => {
       <div>
         <a href="/assets/cv.pdf" download>
           <button className="download-button" onClick={handleDownload}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "18px" }} />{" "}
             Download CV
           </button>
         </a>

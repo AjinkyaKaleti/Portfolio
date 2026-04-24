@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./RightMenu.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,6 +8,7 @@ import {
   faBars,
   faHouse,
   faCancel,
+  faParagraph,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
@@ -15,24 +16,9 @@ import {
   faTwitter,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import LeftCard from "./LeftCard";
 
 const RightMenu = ({ lenisRef }) => {
   const [open, setOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1024);
-
-      if (window.innerWidth > 1024) {
-        setOpen(false); // close drawer
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const scrollTo = (id, e) => {
     const target = document.getElementById(id);
@@ -69,19 +55,16 @@ const RightMenu = ({ lenisRef }) => {
           <FontAwesomeIcon icon={faCancel}></FontAwesomeIcon>
         </button>
 
-        {isMobile && (
-          <div className="drawer-profile">
-            <LeftCard compact={true} />
-          </div>
-        )}
-
         {/* Menu Links */}
         <div className="drawer-links">
           <b style={{ fontSize: "22px" }}>
             <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon> Menu
           </b>
+          <p onClick={(e) => scrollTo("profile", e)} className="profile">
+            <FontAwesomeIcon icon={faUser} /> Profile
+          </p>
           <p onClick={(e) => scrollTo("about", e)}>
-            <FontAwesomeIcon icon={faUser}></FontAwesomeIcon> About
+            <FontAwesomeIcon icon={faParagraph}></FontAwesomeIcon> About
           </p>
           <p onClick={(e) => scrollTo("projects", e)}>
             {" "}
@@ -103,7 +86,13 @@ const RightMenu = ({ lenisRef }) => {
           </div>
 
           <div className="menu-item">
-            <FontAwesomeIcon icon={faGithub} className="icon" />
+            <a
+              href="https://github.com/AjinkyaKaleti"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
           </div>
 
           <div className="menu-item">
@@ -125,8 +114,15 @@ const RightMenu = ({ lenisRef }) => {
 
         {/* Outer static menu */}
         <div className="static-outer-menu">
-          <div className="menu-item" onClick={(e) => scrollTo("about", e)}>
+          <div
+            className="menu-item profile"
+            onClick={(e) => scrollTo("profile", e)}
+          >
             <FontAwesomeIcon icon={faUser} className="icon" />
+          </div>
+
+          <div className="menu-item" onClick={(e) => scrollTo("about", e)}>
+            <FontAwesomeIcon icon={faParagraph} className="icon" />
           </div>
 
           <div className="menu-item" onClick={(e) => scrollTo("projects", e)}>
@@ -135,16 +131,6 @@ const RightMenu = ({ lenisRef }) => {
 
           <div className="menu-item" onClick={(e) => scrollTo("contact", e)}>
             <FontAwesomeIcon icon={faEnvelope} className="icon" />
-          </div>
-
-          <div className="menu-item">
-            <a
-              href="https://wa.me/918898708468"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} className="icon" />
-            </a>
           </div>
         </div>
 

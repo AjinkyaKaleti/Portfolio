@@ -1,24 +1,4 @@
 /* RIGHT */
-
-.top-menu svg {
-  border: 2px solid #808080;
-  border-radius: 25px;
-  height: 20px;
-  width: 20px;
-  padding: 10px;
-}
-
-.right {
-  width: 5%;
-  position: fixed;
-  right: 0;
-  height: 100vh;
-  background: #111;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .menu-item {
   size: 12px;
   cursor: pointer;
@@ -29,8 +9,9 @@
   padding: 10px;
   transition: all 0.3s ease;
 }
+
 a .menu-item:hover svg {
-  filter: drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 10px #ffffff);
+  filter: drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 4px #ffffff);
 }
 
 .menu-item a {
@@ -42,6 +23,18 @@ a .menu-item:hover svg {
   margin-top: 20px;
   cursor: pointer;
   color: #fff;
+}
+
+.top-menu svg {
+  border: 2px solid #808080;
+  border-radius: 25px;
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+}
+
+.top-menu svg:hover {
+  filter: brightness(1.2);
 }
 
 .drawer {
@@ -76,7 +69,7 @@ a .menu-item:hover svg {
 }
 
 .drawer .drawer-links p:hover {
-  filter: drop-shadow(0 0 5px #ffffffb2) drop-shadow(0 0 10px #ffffffaf);
+  filter: drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 4px #ffffff);
 }
 
 .drawer-social {
@@ -104,10 +97,22 @@ a .menu-item:hover svg {
   text-align: end;
 }
 
+.close-button:hover {
+  filter: drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 4px #ffffff);
+}
+
 .static-outer-menu {
   border: 2px solid #808080;
   color: #fff;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.static-outer-menu svg:hover {
+  filter: drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 4px #ffffff);
 }
 
 .menu-vertical {
@@ -149,4 +154,14 @@ a .menu-item:hover svg {
   box-shadow:
     0 0 10px #bbbbbb,
     0 0 20px #ffffff;
+}
+
+@media (min-width: 1025px) {
+  .menu-item.profile {
+    display: none;
+  }
+
+  .drawer-links .profile {
+    display: none;
+  }
 }

@@ -57,9 +57,10 @@
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.3s ease;
+  font-family: "Barlow", sans-serif;
 }
 
 .submit-btn:hover {
   background: #ffffff;
-  filter: drop-shadow(0 0 5px #ffffffb2) drop-shadow(0 0 10px #ffffffaf);
+  filter: drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 4px #ffffff);
 }
